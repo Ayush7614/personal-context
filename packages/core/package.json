@@ -1,6 +1,6 @@
 {
   "name": "@personal-context/core",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Core engine that aggregates your digital footprint into an AI-readable profile.",
   "type": "module",
   "main": "./dist/index.js",

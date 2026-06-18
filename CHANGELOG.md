@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.4](https://github.com/Ayush7614/personal-context/compare/v0.1.3...v0.1.4) (2026-06-18)
+
+
+### Features
+
+* **docs:** add announcement bar with Star on GitHub button ([355753f](https://github.com/Ayush7614/personal-context/commit/355753f801daecdba0c7d62d23f9c040b57f3d61))
+
+
+### Documentation
+
+* add MkDocs Material site with GitHub Pages deploy ([8e276d3](https://github.com/Ayush7614/personal-context/commit/8e276d3dd9ba53c38b2fe5c806636ac86846d732))
+
 ## [0.1.3](https://github.com/Ayush7614/personal-context/compare/v0.1.2...v0.1.3) (2026-06-18)
 
 
