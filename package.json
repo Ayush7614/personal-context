@@ -1,0 +1,39 @@
+{
+  "name": "personal-context-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Turn your digital footprint into an AI-readable profile. GitHub + Blogs + Resume + Notes -> one context source for every AI agent.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "dev": "pnpm --filter @personal-context/cli dev",
+    "cli": "node packages/cli/dist/index.js",
+    "clean": "pnpm -r exec rm -rf dist"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "keywords": [
+    "mcp",
+    "devrel",
+    "ai",
+    "cli",
+    "personal-context",
+    "llm",
+    "profile"
+  ],
+  "license": "MIT",
+  "author": "Ayush Kumar <ayushknj3@gmail.com>",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}

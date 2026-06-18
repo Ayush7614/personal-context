@@ -1,0 +1,40 @@
+{
+  "name": "personal-context",
+  "version": "0.1.0",
+  "description": "Turn your digital footprint into an AI-readable profile. One command for GitHub, blogs, open source, and more.",
+  "type": "module",
+  "bin": {
+    "personal-context": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "cli",
+    "mcp",
+    "devrel",
+    "ai",
+    "personal-context",
+    "profile",
+    "llm"
+  ],
+  "license": "MIT",
+  "author": "Ayush Kumar <ayushknj3@gmail.com>",
+  "homepage": "https://github.com/Ayush7614/personal-context#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayush7614/personal-context.git"
+  },
+  "dependencies": {
+    "@personal-context/core": "workspace:*",
+    "commander": "^12.1.0",
+    "picocolors": "^1.1.1",
+    "rss-parser": "^3.13.0",
+    "yaml": "^2.6.1"
+  }
+}

@@ -1,0 +1,103 @@
+# personal-context
+
+> Turn your digital footprint into an AI-readable profile.
+> **GitHub + Blogs + Resume + Notes -> one context source for every AI agent.**
+
+Current AI tools forget who you are. You keep re-explaining your work, skills,
+projects, blogs, and open-source contributions. `personal-context` aggregates
+all of it from your real sources and outputs it as a single profile you can
+print, share, or feed to any AI tool (Cursor, Claude Code, Codex, Gemini CLI).
+
+```
+$ npx personal-context all
+
+Ayush Kumar
+DevRel · AI Agents · Open Source · AI Security
+
+Current Role:
+  Lead Developer Relations Engineer @ NodeShift AI Cloud
+
+Contact:
+  Email: ayushknj3@gmail.com
+  GitHub: https://github.com/Ayush7614
+
+Recent Blogs:
+  - AI Agents Masterclass — Full Visual Guide
+  - Harness Engineering — Full Visual Guide
+  ...
+
+GitHub:
+  Contributions: 1250
+  Repositories: 35
+  ...
+```
+
+## Quick start
+
+```bash
+# 1. Scaffold a config in the current folder
+npx personal-context init
+
+# 2. Edit personal.yaml with your details + source handles
+
+# 3. See your full profile
+npx personal-context all
+
+# 4. Generate AI-readable files (context.md, profile.json, llms.txt)
+npx personal-context build
+```
+
+## Commands
+
+| Command | Description |
+| --- | --- |
+| `init` | Create a starter `personal.yaml` |
+| `all` | Full profile overview (the single-command output) |
+| `github` | GitHub stats + latest contributions |
+| `blogs [--limit N]` | Recent posts across all RSS feeds |
+| `linkedin` | Role + experience timeline |
+| `opensource` (`oss`) | Open-source contributions |
+| `build [--out dir]` | Write `context.md`, `profile.json`, `llms.txt` |
+| `summary` | One-paragraph AI brief |
+
+Every read command supports `--json` for piping into other tools.
+
+## Configuration
+
+Everything is driven by a single `personal.yaml` (see [`personal.yaml`](./personal.yaml)
+for a full reference). Static facts (name, role, skills, projects) live in the
+file; live data is pulled from the sources you configure:
+
+| Information | Source |
+| --- | --- |
+| GitHub contributions, PRs, repos | GitHub REST + GraphQL API |
+| Latest blogs | RSS feeds (Medium, Hashnode, Dev.to) |
+| Experience timeline | `personal.yaml` + LinkedIn export (JSON) |
+| Resume skills / summary | Resume JSON or PDF |
+
+Set `GITHUB_TOKEN` (see [`.env.example`](./.env.example)) to unlock contribution
+counts and higher rate limits.
+
+## Architecture
+
+A pnpm monorepo with a shared core so the CLI, an upcoming MCP server, and your
+portfolio all consume the same profile data.
+
+```
+personal-context/
+├── packages/
+│   ├── core/   # sources + aggregation + renderers (Profile, context.md, llms.txt)
+│   └── cli/    # the `personal-context` command
+└── personal.yaml
+```
+
+## Roadmap
+
+- **v1** — Core + CLI (GitHub, blogs, LinkedIn, resume, generated profiles) ✅
+- **v2** — MCP server (`get_profile`, `get_recent_blogs`, `get_github_stats`, ...) + portfolio `context.json` / `llms.txt` endpoints
+- **v3** — "Ask My Portfolio" chat + auto-learning timeline
+- **v4** — AI personal brief + scheduled refresh
+
+## License
+
+MIT © Ayush Kumar

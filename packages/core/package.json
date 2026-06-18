@@ -1,0 +1,28 @@
+{
+  "name": "@personal-context/core",
+  "version": "0.1.0",
+  "description": "Core engine that aggregates your digital footprint into an AI-readable profile.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "rss-parser": "^3.13.0",
+    "yaml": "^2.6.1"
+  }
+}

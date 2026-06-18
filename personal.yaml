@@ -1,0 +1,103 @@
+name: Ayush Kumar
+headline: DevRel · AI Agents · Open Source · AI Security
+bio: >-
+  Developer Relations Engineer and Full-Stack Developer with deep expertise in
+  open source, cloud, LLMs, AI/ML, and developer community building. Building
+  RuntimeWall, the secure runtime for autonomous AI agents. 4+ years shaping
+  developer communities, 2+ years deep in AI, LLMs, and production-ready agents.
+
+currentRole:
+  role: Lead Developer Relations Engineer
+  company: NodeShift AI Cloud
+  start: July 2024
+  end: December 2025
+  location: Remote
+  highlights:
+    - Authored 150+ blogs on AI, LLMs, MCP, APIs, Web3, Gaming, and Cloud.
+    - Worked on Dubai UAE Government TAK Server deployment on NodeShift GPU/compute VMs.
+    - Led documentation improvements for smoother onboarding and higher retention.
+
+contact:
+  email: ayushknj3@gmail.com
+  website: https://ayushbuilds-dev.vercel.app
+  github: https://github.com/Ayush7614
+  linkedin: https://linkedin.com/in/ayush-kumar-cse
+  topmate: https://topmate.io/ayush7
+
+skills:
+  - Developer Relations
+  - Technical Writing
+  - LLMs & Agentic AI
+  - AI Security
+  - Cybersecurity
+  - Runtime Governance
+  - MCP & Tooling
+  - Open Source
+  - Full-Stack Development
+  - Cloud (AWS / GCP / Azure)
+
+learning:
+  - MCP Servers
+  - AI Agents & Agent Harnesses
+  - LLM Evaluation
+  - Local LLMs
+  - Runtime Security
+
+projects:
+  - name: RuntimeWall
+    description: Security-first runtime and governance platform for autonomous AI agents.
+    url: https://github.com/Ayush7614
+    tags: [Go, Next.js, Docker, WebSockets, PostgreSQL]
+    status: active
+  - name: NeuralVerse
+    description: Personal blog platform — 800+ posts on AI, LLMs, agentic AI, and security.
+    url: https://neural-verse-peach.vercel.app
+    tags: [Next.js, MDX]
+  - name: ayushbuilds.dev
+    description: Personal portfolio site with a dark ember aesthetic.
+    url: https://ayushbuilds-dev.vercel.app
+    tags: [Next.js, TypeScript, Tailwind, Framer Motion]
+
+openSource:
+  - name: RuntimeWall
+    org: RuntimeWall
+    role: Founder & Active Contributor
+    description: AI agent runtime security, sandboxes, MCP protection, and observability.
+  - name: Promptfoo
+    org: promptfoo
+    role: Contributor
+    description: Open-source AI security framework for LLM evaluation and red-teaming.
+  - name: Thyris Safe Zone (TSZ)
+    org: Thyris AI
+    role: Contributor
+    description: PII detection and guardrails engine that prevents sensitive data leaking to LLMs.
+
+experience:
+  - role: DevRel Engineer Consultant
+    company: Techlatest.net
+    start: March 2023
+    end: July 2024
+    location: Estonia · Remote
+    highlights:
+      - Content Lead for AI/ML, DevOps, and GUI-based developer education.
+      - Authored 150+ blogs across Cloud, Linux, Stable Diffusion, Flowise, and more.
+  - role: Student Developer
+    company: Google Summer of Code — Fossology
+    start: May 2022
+    end: August 2022
+    location: Remote
+    highlights:
+      - Built REST APIs with React; improved legacy PHP/Slim Framework endpoints.
+
+sources:
+  github:
+    username: Ayush7614
+    pinned:
+      - personal-context
+  blogs:
+    feeds:
+      - https://medium.com/feed/@techlatest.net
+  linkedin:
+    exportPath: ./linkedin-export.json
+  resume:
+    path: ./resume.json
