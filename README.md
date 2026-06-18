@@ -78,23 +78,62 @@ file; live data is pulled from the sources you configure:
 Set `GITHUB_TOKEN` (see [`.env.example`](./.env.example)) to unlock contribution
 counts and higher rate limits.
 
+## MCP server
+
+`personal-context` also ships an [MCP](https://modelcontextprotocol.io) server so
+any AI agent (Cursor, Claude Code, Codex, etc.) can query your context live.
+
+Add it to your MCP client config (e.g. Cursor's `~/.cursor/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "personal-context": {
+      "command": "npx",
+      "args": ["-y", "personal-context-mcp"],
+      "env": {
+        "PERSONAL_CONTEXT_CONFIG": "/absolute/path/to/personal.yaml",
+        "GITHUB_TOKEN": "optional-token"
+      }
+    }
+  }
+}
+```
+
+Then your agent can call:
+
+| Tool | Returns |
+| --- | --- |
+| `get_profile` | The full profile object |
+| `get_summary` | One-paragraph AI brief |
+| `get_recent_blogs` `{ limit }` | Recent posts across feeds |
+| `get_github_stats` | Contributions, PRs, repos, top repos |
+| `get_projects` | Projects you build/ship |
+| `get_open_source` | Open-source contributions |
+| `get_contact_info` | Email, website, socials |
+| `get_learning_history` | What you're learning + skills |
+
+`PERSONAL_CONTEXT_CONFIG` points the server at your `personal.yaml` regardless of
+the directory the client launches it from.
+
 ## Architecture
 
-A pnpm monorepo with a shared core so the CLI, an upcoming MCP server, and your
+A pnpm monorepo with a shared core so the CLI, the MCP server, and your
 portfolio all consume the same profile data.
 
 ```
 personal-context/
 ├── packages/
 │   ├── core/   # sources + aggregation + renderers (Profile, context.md, llms.txt)
-│   └── cli/    # the `personal-context` command
+│   ├── cli/    # the `personal-context` command
+│   └── mcp/    # the `personal-context-mcp` MCP server
 └── personal.yaml
 ```
 
 ## Roadmap
 
 - **v1** — Core + CLI (GitHub, blogs, LinkedIn, resume, generated profiles) ✅
-- **v2** — MCP server (`get_profile`, `get_recent_blogs`, `get_github_stats`, ...) + portfolio `context.json` / `llms.txt` endpoints
+- **v2** — MCP server (`get_profile`, `get_recent_blogs`, `get_github_stats`, ...) ✅ + portfolio `context.json` / `llms.txt` endpoints (in progress)
 - **v3** — "Ask My Portfolio" chat + auto-learning timeline
 - **v4** — AI personal brief + scheduled refresh
 

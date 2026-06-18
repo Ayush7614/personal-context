@@ -44,3 +44,8 @@ jobs:
         run: pnpm --filter personal-context publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish MCP server to npm
+        if: ${{ env.NPM_TOKEN != '' }}
+        run: pnpm --filter personal-context-mcp publish --no-git-checks --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

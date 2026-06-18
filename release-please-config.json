@@ -17,7 +17,8 @@
       "package-name": "personal-context",
       "extra-files": [
         { "type": "json", "path": "packages/cli/package.json", "jsonpath": "$.version" },
-        { "type": "json", "path": "packages/core/package.json", "jsonpath": "$.version" }
+        { "type": "json", "path": "packages/core/package.json", "jsonpath": "$.version" },
+        { "type": "json", "path": "packages/mcp/package.json", "jsonpath": "$.version" }
       ]
     }
   }
