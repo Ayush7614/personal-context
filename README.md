@@ -10,6 +10,8 @@
 > [!NOTE]
 > Work in progress — something crazy on the way. ✦
 
+**Documentation: https://ayush7614.github.io/personal-context/**
+
 Current AI tools forget who you are. You keep re-explaining your work, skills,
 projects, blogs, and open-source contributions. `personal-context` aggregates
 all of it from your real sources and outputs it as a single profile you can

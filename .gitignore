@@ -9,3 +9,5 @@ out/
 coverage/
 *.tsbuildinfo
 .pnpm-store/
+.venv/
+site/

@@ -1,0 +1,83 @@
+site_name: personal-context
+site_description: Turn your digital footprint into an AI-readable profile. GitHub + Blogs + Resume + Notes -> one context source for every AI agent.
+site_author: Ayush Kumar
+site_url: https://ayush7614.github.io/personal-context/
+repo_name: Ayush7614/personal-context
+repo_url: https://github.com/Ayush7614/personal-context
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Ayush Kumar — MIT License
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+
+extra_css:
+  - assets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Ayush7614
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ayush-kumar-cse
+    - icon: material/web
+      link: https://ayushbuilds-dev.vercel.app
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Getting Started: installation.md
+  - CLI Reference: cli.md
+  - Configuration: configuration.md
+  - MCP Server: mcp.md
+  - Portfolio Integration: portfolio.md
+  - Releases & Versioning: releases.md
+  - Contributing: contributing.md
