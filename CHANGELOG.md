@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/Ayush7614/personal-context/compare/v0.1.2...v0.1.3) (2026-06-18)
+
+
+### Features
+
+* **cli:** add animated work-in-progress teaser + demo GIF ([943bcf4](https://github.com/Ayush7614/personal-context/commit/943bcf48ceafc8af705ffa606e662f9b30452527))
+
 ## [0.1.2](https://github.com/Ayush7614/personal-context/compare/v0.1.1...v0.1.2) (2026-06-18)
 
 
