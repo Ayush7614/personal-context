@@ -16,5 +16,6 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm typecheck
+      # Build first so workspace packages emit their .d.ts before typecheck.
       - run: pnpm build
+      - run: pnpm typecheck
