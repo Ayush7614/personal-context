@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/Ayush7614/personal-context/compare/v0.1.4...v0.1.5) (2026-06-18)
+
+
+### Bug Fixes
+
+* **npm:** prepare CLI and MCP packages for npm publishing ([bfc671f](https://github.com/Ayush7614/personal-context/commit/bfc671f0d67a9e6a2923030d21690008e9dd551d))
+
 ## [0.1.4](https://github.com/Ayush7614/personal-context/compare/v0.1.3...v0.1.4) (2026-06-18)
 
 
