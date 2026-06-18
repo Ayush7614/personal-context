@@ -32,9 +32,15 @@
   },
   "dependencies": {
     "@personal-context/core": "workspace:*",
+    "boxen": "^8.0.1",
     "commander": "^12.1.0",
+    "figlet": "^1.8.0",
+    "gradient-string": "^3.0.0",
     "picocolors": "^1.1.1",
     "rss-parser": "^3.13.0",
     "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0"
   }
 }

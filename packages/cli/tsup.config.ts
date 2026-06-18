@@ -9,6 +9,6 @@ export default defineConfig({
   // Bundle the workspace core so the published CLI is self-contained, but keep
   // third-party (CJS) deps external so they load correctly under ESM.
   noExternal: [/@personal-context\/core/],
-  external: ["yaml", "rss-parser"],
+  external: ["yaml", "rss-parser", "figlet", "gradient-string", "boxen"],
   banner: { js: "#!/usr/bin/env node" },
 });

@@ -14,6 +14,7 @@ import {
   renderSummary,
   type Profile,
 } from "@personal-context/core";
+import { renderBanner } from "./banner.js";
 
 const program = new Command();
 
@@ -265,9 +266,11 @@ program
   .description("Show your full profile (the single-command overview)")
   .option("--json", "output raw JSON")
   .option("-l, --limit <n>", "number of blogs to include", "8")
-  .action(async (opts: { json?: boolean; limit: string }) => {
+  .option("--no-banner", "hide the ASCII banner")
+  .action(async (opts: { json?: boolean; limit: string; banner?: boolean }) => {
     const profile = await buildProfile({ blogLimit: Number.parseInt(opts.limit, 10) || 8 });
     if (opts.json) return console.log(renderJson(profile));
+    if (opts.banner !== false) console.log(renderBanner(profile.name, profile.headline));
     printProfile(profile);
   });
 
@@ -298,6 +301,29 @@ program
     const profile = await buildProfile();
     console.log(renderSummary(profile));
   });
+
+program
+  .command("banner")
+  .description("Print the ASCII banner")
+  .action(() => {
+    try {
+      const { config } = loadConfig();
+      console.log(renderBanner(config.name, config.headline));
+    } catch {
+      console.log(renderBanner());
+    }
+  });
+
+// Bare `personal-context` shows the banner, then the help text.
+program.action(() => {
+  try {
+    const { config } = loadConfig();
+    console.log(renderBanner(config.name, config.headline));
+  } catch {
+    console.log(renderBanner());
+  }
+  program.outputHelp();
+});
 
 program.parseAsync(process.argv).catch((err) => {
   fail(err instanceof Error ? err.message : String(err));
