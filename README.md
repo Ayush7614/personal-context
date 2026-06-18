@@ -3,6 +3,13 @@
 > Turn your digital footprint into an AI-readable profile.
 > **GitHub + Blogs + Resume + Notes -> one context source for every AI agent.**
 
+<p align="center">
+  <img src="docs/demo.gif" alt="personal-context CLI demo" width="760" />
+</p>
+
+> [!NOTE]
+> Work in progress — something crazy on the way. ✦
+
 Current AI tools forget who you are. You keep re-explaining your work, skills,
 projects, blogs, and open-source contributions. `personal-context` aggregates
 all of it from your real sources and outputs it as a single profile you can
@@ -52,6 +59,7 @@ npx personal-context build
 | Command | Description |
 | --- | --- |
 | `init` | Create a starter `personal.yaml` |
+| `teaser` (`wip`) | Animated "something crazy on the way" splash |
 | `all` | Full profile overview (the single-command output) |
 | `github` | GitHub stats + latest contributions |
 | `blogs [--limit N]` | Recent posts across all RSS feeds |

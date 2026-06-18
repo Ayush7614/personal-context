@@ -15,6 +15,7 @@ import {
   type Profile,
 } from "@personal-context/core";
 import { renderBanner } from "./banner.js";
+import { runTeaser } from "./teaser.js";
 
 const program = new Command();
 
@@ -300,6 +301,23 @@ program
   .action(async () => {
     const profile = await buildProfile();
     console.log(renderSummary(profile));
+  });
+
+program
+  .command("teaser")
+  .alias("wip")
+  .description("Play the animated 'something crazy on the way' teaser")
+  .action(async () => {
+    let name: string | undefined;
+    let headline: string | undefined;
+    try {
+      const { config } = loadConfig();
+      name = config.name;
+      headline = config.headline;
+    } catch {
+      // fall back to defaults
+    }
+    await runTeaser(name, headline);
   });
 
 program
