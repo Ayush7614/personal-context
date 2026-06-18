@@ -9,6 +9,7 @@ copyright: Copyright &copy; 2026 Ayush Kumar — MIT License
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/logo.svg
   favicon: assets/logo.svg
   font:
@@ -30,6 +31,7 @@ theme:
         icon: material/weather-sunny
         name: Switch to dark mode
   features:
+    - announce.dismiss
     - navigation.instant
     - navigation.tracking
     - navigation.sections

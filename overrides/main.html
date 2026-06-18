@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  <div class="pc-announce">
+    <span class="pc-announce__text">
+      <span class="pc-announce__emoji">🚧</span>
+      <strong>personal-context</strong> is in active development — something crazy is on the way.
+    </span>
+    <a
+      class="pc-star"
+      href="https://github.com/Ayush7614/personal-context"
+      target="_blank"
+      rel="noopener"
+      title="Star personal-context on GitHub"
+    >
+      {% include ".icons/octicons/star-16.svg" %}
+      <span>Star on GitHub</span>
+    </a>
+  </div>
+{% endblock %}

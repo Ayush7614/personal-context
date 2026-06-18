@@ -36,3 +36,51 @@
 .md-typeset h2 {
   letter-spacing: -0.01em;
 }
+
+/* Announcement bar with ember gradient. */
+.md-banner {
+  background: linear-gradient(90deg, #c44d22 0%, #ff6b35 50%, #ff8c5a 100%);
+  color: #fff;
+}
+.md-banner__inner {
+  margin: 0.45rem auto;
+}
+.pc-announce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  font-size: 0.72rem;
+}
+.pc-announce__text strong {
+  font-weight: 700;
+}
+.pc-announce__emoji {
+  margin-right: 0.2rem;
+}
+.pc-star {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.28);
+  color: #fff !important;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s;
+}
+.pc-star:hover {
+  background: rgba(0, 0, 0, 0.45);
+  transform: translateY(-1px);
+}
+.pc-star svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
+}
+/* The banner dismiss button should stay visible on the gradient. */
+.md-banner .md-banner__button {
+  color: #fff;
+}
