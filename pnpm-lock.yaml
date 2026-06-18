@@ -20,9 +20,6 @@ importers:
 
   packages/cli:
     dependencies:
-      '@personal-context/core':
-        specifier: workspace:*
-        version: link:../core
       boxen:
         specifier: ^8.0.1
         version: 8.0.1
@@ -45,6 +42,9 @@ importers:
         specifier: ^2.6.1
         version: 2.9.0
     devDependencies:
+      '@personal-context/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/figlet':
         specifier: ^1.7.0
         version: 1.7.0
@@ -63,9 +63,6 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.12.0
         version: 1.29.0(zod@3.25.76)
-      '@personal-context/core':
-        specifier: workspace:*
-        version: link:../core
       rss-parser:
         specifier: ^3.13.0
         version: 3.13.0
@@ -75,6 +72,10 @@ importers:
       zod:
         specifier: ^3.23.8
         version: 3.25.76
+    devDependencies:
+      '@personal-context/core':
+        specifier: workspace:*
+        version: link:../core
 
 packages:
 

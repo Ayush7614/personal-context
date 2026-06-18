@@ -7,7 +7,8 @@
     "personal-context": "./dist/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "tsup",
@@ -24,14 +25,19 @@
     "llm"
   ],
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "author": "Ayush Kumar <ayushknj3@gmail.com>",
   "homepage": "https://github.com/Ayush7614/personal-context#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ayush7614/personal-context.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
-    "@personal-context/core": "workspace:*",
     "boxen": "^8.0.1",
     "commander": "^12.1.0",
     "figlet": "^1.8.0",
@@ -41,6 +47,7 @@
     "yaml": "^2.6.1"
   },
   "devDependencies": {
+    "@personal-context/core": "workspace:*",
     "@types/figlet": "^1.7.0"
   }
 }
